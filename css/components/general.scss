@@ -1,0 +1,28 @@
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+                 GENERAL
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+
+body {
+    user-select: none;
+    overflow-x: hidden;
+    font-family: "Roboto", sans-serif;
+    background-color: black;
+    color: white;
+}
+
+main {
+    overflow-x: hidden;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+
+    &:hover {
+        color: inherit;
+    }
+}
+
+section {
+    min-height: 105vh;
+}
