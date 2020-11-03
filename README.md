@@ -5,7 +5,7 @@ Collection of High Performance Super smooth functions that help you to create aw
 
 | Name             | Description                                                        |
 | ---------------- | ------------------------------------------------------------------ |
-| [ GSAP ] (GreenSock Animation Plateform) | GSAP is a JavaScript library for building high-performance animations that work in every major browser. |
+| [ GSAP ]  (GreenSock Animation) | GSAP is a JavaScript library for building high-performance animations that work in every major browser. |
 
 
 [GSAP]: https://greensock.com/
