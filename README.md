@@ -6,7 +6,7 @@
 
 | Name             | Description                                                        |
 | ---------------- | ------------------------------------------------------------------ |
-| [💚 Greensock (gsap) ]  | a JavaScript library for building high-performance animations that work in every major browser. |
+| [💚 Greensock]  | Gsap is a JavaScript library for building high-performance animations that work in every major browser. |
 
-[💚 Greensock (gsap) ]:https://greensock.com/
+[💚 Greensock]:https://greensock.com/
                                         
