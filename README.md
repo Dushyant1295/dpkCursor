@@ -8,5 +8,5 @@
 | ----------------------- | ----------------------------------------------------------- |
 | [💚 gsap]  | Gsap is a JavaScript library for building high-performance animations that work in every major browser. |
 
-[💚 Greensock]:https://greensock.com/
+[💚 gsap]:https://greensock.com/
                                         
