@@ -1,7 +1,3 @@
-/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-              Custom Cursor
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
-
 .dpkCursor {
     height: 1.75rem;
     width: 1.75rem;
@@ -28,10 +24,8 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    span {
-        font-size: 0.875rem;
-    }
+    font-size: 0.875rem;
     b {
-        font-size: 1.7rem;
+        font-size: 1.75rem;
     }
 }
