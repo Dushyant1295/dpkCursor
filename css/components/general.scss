@@ -24,8 +24,21 @@ a {
 }
 
 section {
+
+  
+
     min-height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
+    text-align: center;
+    
+}
+
+
+.container{
+    height: 10rem;
+    width: 90%;
+    border: 1px solid gray; 
+    padding: 10vh;
 }
