@@ -5,8 +5,8 @@
 ### Dependencies
 
 | Name                    | Description                                                        |
-| ----------------------- | ----------------------------------------------------------- |
-| [💚 gsap]  | Gsap is a JavaScript library for building high-performance animations that work in every major browser. |
+| ----------------------- | ------------------------------------------------------------------ |
+| [💚 gsap]               | Gsap is a JavaScript library for building high-performance animations that work in every major browser. |
 
 [💚 gsap]:https://greensock.com/
                                         
