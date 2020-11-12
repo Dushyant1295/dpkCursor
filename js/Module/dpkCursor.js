@@ -57,7 +57,7 @@ function cursorEffects() {
         if (dataHoverText) dpkCursor.innerHTML = dataHoverText;
 
         if (emogy) {
-          dpkCursor.innerHTML = emogy;
+          dpkCursor.innerHTML =`<b>${emogy}</b>`;
           gsap.set(dpkCursor, { mixBlendMode: "normal", borderColor: "gray" });
         }
 
