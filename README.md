@@ -4,7 +4,7 @@
 #
 <p align="center">        
     <a href="#">
-        <img src="img/dpkCursor.gif" height="400">
+        <img src="img/dpkCursor.gif" height="450">
     </a>
 </p>
 #
