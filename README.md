@@ -2,7 +2,7 @@
 #### 🤍 Collection of High Performance Super smooth functions that help you to create awwward winning websites. 
 
 #
-<p align="center">        
+<p align="left">        
     <a href="#">
         <img src="img/dpkCursor.gif" height="350">
     </a>
