@@ -21,6 +21,10 @@ or
 <h1 class='dpk-hover' data-hover-emogy='💚'>Hey</h1>
 or
 <h1 class='dpk-hover' data-hover-bg='#222'>Hey</h1>
+
+or hide the custome cursor
+<h1 class='dpk-hover noCursor' data-hover-bg='#222'>Hey</h1>
+
 ```
 
 ##### CSS
