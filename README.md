@@ -33,7 +33,7 @@ Add the base styles to your CSS file.
 ##### JS
 #
 ```js
-<script src="dpk.min.js"></script>
+<script src="dpkCursor.min.js"></script>
 <script>
     initCursor();
     cursorEffects();
