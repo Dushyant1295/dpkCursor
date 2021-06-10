@@ -27,8 +27,8 @@ Add the dpkCursor.min.js
 ##### USAGE
 
 ```HTML
-    
-    
+
+
 <link rel="stylesheet" href="dpkCursor.min.css" />
 
 
@@ -77,6 +77,8 @@ Add the dpkCursor.min.js
 
 #
 
+##### [Play with it on Codepen]
+
 | Dependencies | Description                                                                                                                             |
 | ------------ | --------------------------------------------------------------------------------------------------------------------------------------- |
 | [💚 gsap]    | Greensock Animation Plateform (gsap) is a JavaScript library for building high-performance animations that work in every major browser. |
@@ -84,3 +86,4 @@ Add the dpkCursor.min.js
 [💚 gsap]: https://greensock.com/
 [download dpkcursor.min.js from cdn]: https://cdn.jsdelivr.net/gh/Dushyant1295/dpkCursor/dpkCursor.min.js
 [download dpkcursor.min.css from cdn]: https://cdn.jsdelivr.net/gh/Dushyant1295/dpkCursor/dpkCursor.min.css
+[play with it on codepen]: https://codepen.io/dushyant1295/pen/JjWrwZa
