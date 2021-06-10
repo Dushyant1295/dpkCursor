@@ -9,7 +9,6 @@
         <img src="./src/img/dpkCursor.gif" height="350">
     </a>
 </p>
-#
 
 ### How to use:
 
@@ -34,11 +33,34 @@ Add the dpkCursor.css
 
 [download dpkCursor.min.css from CDN]
 
-##### JS
+##### JAVASCRIPT
 
-Add the dpCursor.min.js
+Add the dpkCursor.min.js
 
 [download dpkCursor.min.js from CDN]
+
+##### USAGE
+
+```js
+<script src="dpkCursor.min.js"></script>
+<script>
+    initCursor();
+    cursorEffects();
+</script>
+```
+
+##### HTML Element attributes
+
+#
+
+| Attribute          | Values           | Description         |
+| ------------------ | ---------------- | ------------------- |
+| `data-hover-text`  | string           | text inside Circle  |
+| `data-hover-emogy` | string           | emogy inside Circle |
+| `data-hover-bg`    | color- name/code | bg Color of Circle  |
+| `data-hover-bg`    | mixBlend         | mix-blend effect    |
+
+#
 
 ##### dpkCursor Provides Following Functions
 
@@ -52,29 +74,10 @@ Add the dpCursor.min.js
 
 #
 
-```js
-<script src="dpkCursor.min.js"></script>
-<script>
-    initCursor();
-    cursorEffects();
-</script>
-```
-
-##### Element attributes
-
-#
-
-| Attribute          | Values           | Description         |
-| ------------------ | ---------------- | ------------------- |
-| `data-hover-text`  | string           | text inside Circle  |
-| `data-hover-emogy` | string           | emogy inside Circle |
-| `data-hover-bg`    | color- name/code | bg Color of Circle  |
-| `data-hover-bg`    | mixBlend         | mix-blend effect    |
-
 | Dependencies | Description                                                                                                                             |
 | ------------ | --------------------------------------------------------------------------------------------------------------------------------------- |
 | [💚 gsap]    | Greensock Animation Plateform (gsap) is a JavaScript library for building high-performance animations that work in every major browser. |
 
 [💚 gsap]: https://greensock.com/
 [download dpkcursor.min.js from cdn]: https://cdn.jsdelivr.net/gh/Dushyant1295/dpkCursor/dpkCursor.min.js
-[download dpkcursor.css from cdn]: https://cdn.jsdelivr.net/gh/Dushyant1295/dpkCursor/dpkCursor.min.css
+[download dpkcursor.min.css from cdn]: https://cdn.jsdelivr.net/gh/Dushyant1295/dpkCursor/dpkCursor.min.css
