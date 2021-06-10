@@ -26,7 +26,7 @@
   justify-content: center;
   align-items: center;
   font-size: 0.875rem;
-  b {
-    font-size: 1.65rem;
-  }
+}
+.hover-active b {
+  font-size: 1.65rem;
 }

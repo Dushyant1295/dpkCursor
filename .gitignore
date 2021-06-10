@@ -3,3 +3,5 @@ node_modules
 package-lock.json
 webpack.config.js
 desktop.ini
+dpk.min.js.LICENSE.txt
+package.json
