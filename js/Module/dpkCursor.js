@@ -1,8 +1,13 @@
 import { isMobile } from "./Helper";
 
-const dpkCursor = document.querySelector(".dpkCursor");
 
-function initCursor() {
+const dpkCursor = document.createElement("div");
+dpkCursor.classList.add("dpkCursor");
+document.body.appendChild(dpkCursor);
+
+function initCursor(speedOption = 0.13, easeOption = "sine.out") {
+  if (isMobile()) dpkCursor.style.display = "none";
+
   if (!isMobile() && dpkCursor) {
     gsap.set(dpkCursor, { xPercent: -50, yPercent: -50 });
 
@@ -14,10 +19,10 @@ function initCursor() {
 
     window.addEventListener("mousemove", (e) => {
       gsap.to(dpkCursorMouse, {
-        duration: 0.13,
+        duration: speedOption,
         x: e.x,
         y: e.y,
-        ease: "sine.out",
+        ease: easeOption,
         overwrite: true,
       });
     });
@@ -44,6 +49,7 @@ function resetCursor() {
 
 function cursorEffects() {
   const dataHover = document.querySelectorAll(".dpk-hover");
+  const hideCursor = document.querySelectorAll(".noCursor");
 
   if (!isMobile() && dataHover) {
     dataHover.forEach(function (target) {
@@ -52,12 +58,16 @@ function cursorEffects() {
         let emogy = target.getAttribute("data-hover-emogy");
         let datafillbg = target.getAttribute("data-hover-bg");
 
-        dpkCursor.classList.add("hover-active");
+        if (target.classList.contains("noCursor")) {
+          gsap.set(dpkCursor, { borderWidth: 0 });
+        } else {
+          dpkCursor.classList.add("hover-active");
+        }
 
         if (dataHoverText) dpkCursor.innerHTML = dataHoverText;
 
         if (emogy) {
-          dpkCursor.innerHTML =`<b>${emogy}</b>`;
+          dpkCursor.innerHTML = `<b>${emogy}</b>`;
           gsap.set(dpkCursor, { mixBlendMode: "normal", borderColor: "gray" });
         }
 
@@ -77,4 +87,5 @@ function cursorEffects() {
     });
   }
 }
-export { initCursor, resetCursor, cursorEffects };
+
+export { dpkCursor, initCursor, resetCursor, cursorEffects };
