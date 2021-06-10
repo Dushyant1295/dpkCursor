@@ -28,9 +28,15 @@ or hide the custome cursor
 ```
 
 ##### CSS
-Add the base styles to your CSS file.
+Add the dpkCursor.css
+
+[download dpkCursor.css from CDN]
 
 ##### JS
+Add the dpCursor.min.js
+
+[download dpkCursor.min.js from CDN]
+
 #
 ```js
 <script src="dpkCursor.min.js"></script>
@@ -57,5 +63,7 @@ Add the base styles to your CSS file.
 | ----------------------- | ------------------------------------------------------------------ |
 | [💚 gsap]               | Greensock Animation Plateform (gsap) is a JavaScript library for building high-performance animations that work in every major browser. |
 
+
 [💚 gsap]:https://greensock.com/
-                                        
+[download dpkCursor.min.js from CDN]:https://cdn.jsdelivr.net/gh/Dushyant1295/dpkCursor/dpkCursor.min.js                                        
+[download dpkCursor.css from CDN]:https://cdn.jsdelivr.net/gh/Dushyant1295/dpkCursor/dpkCursor.css
