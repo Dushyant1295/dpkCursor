@@ -12,21 +12,6 @@
 
 ### How to use:
 
-##### HTML
-
-###
-
-```html
-<h1 class="dpk-hover" data-hover-text="Hello">Hi</h1>
-or
-<h1 class="dpk-hover" data-hover-emogy="💚">Hey</h1>
-or
-<h1 class="dpk-hover" data-hover-bg="#222">Hey</h1>
-
-or hide the custome cursor
-<h1 class="dpk-hover noCursor" data-hover-bg="#222">Hey</h1>
-```
-
 ##### CSS
 
 Add the dpkCursor.css
@@ -41,12 +26,30 @@ Add the dpkCursor.min.js
 
 ##### USAGE
 
-```js
+```HTML
+    
+    
+<link rel="stylesheet" href="dpkCursor.min.css" />
+
+
+        <div class="dpk-hover" data-hover-text="Hello"> Text </div>
+
+        <div class="dpk-hover" data-hover-emogy="💚"> Emogy </div>
+
+        <div class="dpk-hover" data-hover-bg="#222"> Background </div>
+
+        <div class="dpk-hover noCursor" data-hover-bg="#222"> Text with Background </div>
+
+
+
 <script src="dpkCursor.min.js"></script>
+
 <script>
     initCursor();
     cursorEffects();
 </script>
+
+
 ```
 
 ##### HTML Element attributes
