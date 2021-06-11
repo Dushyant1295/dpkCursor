@@ -66,11 +66,7 @@ npm install dpk_cursor
 // import like this
 
 import {
-  dpkCursor,
-  initCursor,
-  resetCursor,
-  cursorEffects,
-} from "dpk_cursor/module/dpkCursor";
+  dpkCursor,initCursor,resetCursor,cursorEffects } from "dpk_cursor/module/dpkCursor";
 
 ```
 
