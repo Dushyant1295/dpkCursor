@@ -11,9 +11,8 @@
 </p>
 
 ##### [Play with it on Codepen]
+
 #
-
-
 
 ### How to use:
 
@@ -57,17 +56,25 @@ Add the dpkCursor.min.js
 
 ```
 
-
-
-## Installation Using NPM
+#### Installation Using NPM
 
 ```sh
 npm install dpk_cursor
+
+
+
+// import like this
+
+import {
+  dpkCursor,
+  initCursor,
+  resetCursor,
+  cursorEffects,
+} from "dpk_cursor/module/dpkCursor";
+
 ```
 
 #
-
-
 
 ##### HTML Element attributes
 
@@ -93,8 +100,6 @@ npm install dpk_cursor
 | `resetCursor()`   | -                    | -                | reset dpkCursor |
 
 #
-
-
 
 | Dependencies | Description                                                                                                                             |
 | ------------ | --------------------------------------------------------------------------------------------------------------------------------------- |
