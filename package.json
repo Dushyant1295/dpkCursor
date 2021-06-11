@@ -1,12 +1,18 @@
 {
   "name": "dpk_cursor",
   "version": "1.0.1",
-  "description": "Collection of High Performance Super smooth functions that help you to create awwward winning websites.",
-  "main": "index.js",
+  "description": "Easy, High Performance, Super smooth custom cursor functions built with gsap that help you to create cool things.",
+  "main": ".src/js/dpkCursor.js",
   "scripts": {
     "dev": "webpack --mode development",
     "build": "webpack --mode production"
   },
+  "keywords": [
+    "dpkCursor",
+    "Custom Cursor",
+    "Mouse Events",
+    "gsap"
+  ],
   "author": "Dushyant",
   "license": "MIT",
   "bugs": {

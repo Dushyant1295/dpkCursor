@@ -1,6 +1,6 @@
-# dpk.js
+# dpkCursor.js
 
-#### 🤍 Collection of High Performance Super smooth functions that help you to create awwward winning websites.
+#### 🤍 Easy, High Performance, Super smooth custom cursor functions built with gsap that help you to create cool things.
 
 #
 

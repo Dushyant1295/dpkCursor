@@ -5,6 +5,8 @@ const dpkCursor = document.createElement("div");
 dpkCursor.classList.add("dpkCursor");
 document.body.appendChild(dpkCursor);
 
+
+
 function initCursor(speedOption = 0.13, easeOption = "sine.out") {
   if (isMobile()) dpkCursor.style.display = "none";
 
