@@ -1,6 +1,7 @@
 # dpkCursor.js
 
-#### 🤍 Easy, High Performance, Super smooth custom cursor functions built with gsap that help you to create cool things.
+#### Easy, small, High Performance, Super smooth custom cursor functions built with gsap
+     that helps you to create cool things using this small, just 2kb 100 lines of code JS library.
 
 #
 
