@@ -10,6 +10,11 @@
     </a>
 </p>
 
+##### [Play with it on Codepen]
+#
+
+
+
 ### How to use:
 
 ##### CSS
@@ -52,6 +57,18 @@ Add the dpkCursor.min.js
 
 ```
 
+
+
+## Installation Using NPM
+
+```sh
+npm install dpk_cursor
+```
+
+#
+
+
+
 ##### HTML Element attributes
 
 #
@@ -77,7 +94,7 @@ Add the dpkCursor.min.js
 
 #
 
-##### [Play with it on Codepen]
+
 
 | Dependencies | Description                                                                                                                             |
 | ------------ | --------------------------------------------------------------------------------------------------------------------------------------- |
