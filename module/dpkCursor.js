@@ -1,20 +1,29 @@
-import { isMobile } from "./Helper";
 const { gsap } = require("gsap/dist/gsap");
 
-const dpkCursor = document.createElement('div');
-dpkCursor.classList.add('dpkCursor');
+const isMob = () => {
+  return !!(
+    navigator.userAgent.match(/Android/i) ||
+    navigator.userAgent.match(/webOS/i) ||
+    navigator.userAgent.match(/iPhone/i) ||
+    navigator.userAgent.match(/iPad/i) ||
+    navigator.userAgent.match(/iPod/i) ||
+    navigator.userAgent.match(/BlackBerry/i) ||
+    navigator.userAgent.match(/Windows Phone/i)
+  );
+};
+
+const dpkCursor = document.createElement("div");
+dpkCursor.classList.add("dpkCursor");
 document.body.appendChild(dpkCursor);
 
-
 function initCursor(speedOption = 0.13, easeOption = "sine.out") {
-  if (isMobile()) dpkCursor.style.display = "none";
-
-  if (!isMobile() && dpkCursor) {
+  if (isMob()) {
+    dpkCursor.style.display = "none";
+  } else {
     gsap.set(dpkCursor, { xPercent: -50, yPercent: -50 });
 
     let dpkCursorPos = { x: window.innerWidth / 2, y: window.innerHeight / 2 };
     let dpkCursorMouse = { x: dpkCursorPos.x, y: dpkCursorPos.y };
-
     let dpkCursorXSet = gsap.quickSetter(dpkCursor, "x", "px");
     let dpkCursorYSet = gsap.quickSetter(dpkCursor, "y", "px");
 
@@ -52,7 +61,7 @@ function cursorEffects() {
   const dataHover = document.querySelectorAll(".dpk-hover");
   const hideCursor = document.querySelectorAll(".noCursor");
 
-  if (!isMobile() && dataHover) {
+  if (!isMob() && dataHover) {
     dataHover.forEach(function (target) {
       target.addEventListener("mouseenter", function () {
         let dataHoverText = target.getAttribute("data-hover-text");

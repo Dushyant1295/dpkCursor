@@ -1,4 +1,4 @@
-import  { initCursor, resetCursor, cursorEffects }  from  "./dpkCursor";
+import  { initCursor, resetCursor, cursorEffects }  from  "../../module/dpkCursor"
 
 initCursor();
 cursorEffects();
