@@ -1,10 +1,9 @@
 import { isMobile } from "./Helper";
+const { gsap } = require("gsap/dist/gsap");
 
-
-const dpkCursor = document.createElement("div");
-dpkCursor.classList.add("dpkCursor");
+const dpkCursor = document.createElement('div');
+dpkCursor.classList.add('dpkCursor');
 document.body.appendChild(dpkCursor);
-
 
 
 function initCursor(speedOption = 0.13, easeOption = "sine.out") {
