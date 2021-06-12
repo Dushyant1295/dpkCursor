@@ -12,28 +12,23 @@
 
 ##### [Play with it on Codepen]
 
-
-
 #
 
 ### How to use:
 
 ##### CSS
 
-Add the dpkCursor.css
+[Add the dpkCursor.css]
 
 [CDN link dpkcursor.css]
 
 ##### JAVASCRIPT
 
-Add the dpkCursor.js
+[Add the dpkCursor.js]
 
 [CDN link dpkcursor.js]
 
 #
-
-
-
 
 ##### USAGE
 
@@ -101,7 +96,8 @@ import { dpkCursor,initCursor,resetCursor,cursorEffects } from "dpk_cursor/modul
 
 #
 
-
-[CDN link dpkcursor.js]: https://cdn.jsdelivr.net/gh/Dushyant1295/dpkCursor/dpkCursor.js
-[CDN link dpkcursor.css]: https://cdn.jsdelivr.net/gh/Dushyant1295/dpkCursor/dpkCursor.css
+[cdn link dpkcursor.js]: https://cdn.jsdelivr.net/gh/Dushyant1295/dpkCursor/dpkCursor.js
+[cdn link dpkcursor.css]: https://cdn.jsdelivr.net/gh/Dushyant1295/dpkCursor/dpkCursor.css
 [play with it on codepen]: https://codepen.io/dushyant1295/pen/JjWrwZa
+[add the dpkcursor.css]: https://github.com/Dushyant1295/dpkCursor/blob/master/dpkCursor.css
+[add the dpkcursor.js]: https://github.com/Dushyant1295/dpkCursor/blob/master/dpkCursor.js
