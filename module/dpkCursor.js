@@ -27,17 +27,18 @@ function initCursor(speedOption = 0.25) {
       dpkCursorMouse.y = e.y;
     });
 
-    const updatePosition = () => {
+    const setPosition = () => {
       dpkCursorPos.x += (dpkCursorMouse.x - dpkCursorPos.x) * speed;
       dpkCursorPos.y += (dpkCursorMouse.y - dpkCursorPos.y) * speed;
       dpkCursor.style.transform = `translate3d(calc(${dpkCursorPos.x}px - 50%) ,calc(${dpkCursorPos.y}px - 50%), 0)`;
     };
 
-    function loop() {
-      updatePosition();
-      requestAnimationFrame(loop);
+    function raFn() {
+      setPosition();
+      requestAnimationFrame(raFn);
     }
-    requestAnimationFrame(loop);
+    requestAnimationFrame(raFn);
+
   }
 }
 
