@@ -5,11 +5,6 @@
   height: 1.75rem;
   width: 1.75rem;
   position: fixed;
-
-  /* Hack For Verson 2 */
-  /* margin:-14px; */
-  
-  
   top: 0;
   left: 0;
   color: white;
@@ -42,4 +37,4 @@
 .hover-active b {
   font-size: 1.65rem;
 }
-/*# sourceMappingURL=dpkCursor.css.map */
+

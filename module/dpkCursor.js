@@ -1,5 +1,3 @@
-const { gsap } = require("gsap/dist/gsap");
-
 const isMob = () => {
   return !!(
     navigator.userAgent.match(/Android/i) ||
@@ -16,45 +14,38 @@ const dpkCursor = document.createElement("div");
 dpkCursor.classList.add("dpkCursor");
 document.body.appendChild(dpkCursor);
 
-function initCursor(speedOption = 0.13, easeOption = "sine.out") {
+function initCursor(speedOption = 0.25) {
   if (isMob()) {
     dpkCursor.style.display = "none";
   } else {
-    gsap.set(dpkCursor, { xPercent: -50, yPercent: -50 });
-
-    let dpkCursorPos = { x: window.innerWidth / 2, y: window.innerHeight / 2 };
-    let dpkCursorMouse = { x: dpkCursorPos.x, y: dpkCursorPos.y };
-    let dpkCursorXSet = gsap.quickSetter(dpkCursor, "x", "px");
-    let dpkCursorYSet = gsap.quickSetter(dpkCursor, "y", "px");
+    let dpkCursorMouse = { x: -100, y: -100 };
+    let dpkCursorPos = { x: -100, y: -100 };
+    let speed = speedOption;
 
     window.addEventListener("mousemove", (e) => {
-      gsap.to(dpkCursorMouse, {
-        duration: speedOption,
-        x: e.x,
-        y: e.y,
-        ease: easeOption,
-        overwrite: true,
-      });
+      dpkCursorMouse.x = e.x;
+      dpkCursorMouse.y = e.y;
     });
 
-    gsap.ticker.add(() => {
-      dpkCursorPos.x += dpkCursorMouse.x - dpkCursorPos.x;
-      dpkCursorPos.y += dpkCursorMouse.y - dpkCursorPos.y;
-      dpkCursorXSet(dpkCursorPos.x);
-      dpkCursorYSet(dpkCursorPos.y);
-    });
+    const updatePosition = () => {
+      dpkCursorPos.x += (dpkCursorMouse.x - dpkCursorPos.x) * speed;
+      dpkCursorPos.y += (dpkCursorMouse.y - dpkCursorPos.y) * speed;
+      dpkCursor.style.transform = `translate3d(calc(${dpkCursorPos.x}px - 50%) ,calc(${dpkCursorPos.y}px - 50%), 0)`;
+    };
+
+    function loop() {
+      updatePosition();
+      requestAnimationFrame(loop);
+    }
+    requestAnimationFrame(loop);
   }
 }
 
 function resetCursor() {
   dpkCursor.innerHTML = "";
   dpkCursor.classList.remove("hover-active");
-  gsap.set(dpkCursor, {
-    background: "",
-    borderColor: "white",
-    borderWidth: 2,
-    mixBlendMode: "difference",
-  });
+  dpkCursor.style.cssText =
+    "background: none; border-color: #fff;  border-width: 2px;  mix-blend-mode: difference;";
 }
 
 function cursorEffects() {
@@ -69,7 +60,7 @@ function cursorEffects() {
         let datafillbg = target.getAttribute("data-hover-bg");
 
         if (target.classList.contains("noCursor")) {
-          gsap.set(dpkCursor, { borderWidth: 0 });
+          dpkCursor.style.borderWidth = 0;
         } else {
           dpkCursor.classList.add("hover-active");
         }
@@ -78,17 +69,14 @@ function cursorEffects() {
 
         if (emogy) {
           dpkCursor.innerHTML = `<b>${emogy}</b>`;
-          gsap.set(dpkCursor, { mixBlendMode: "normal", borderColor: "gray" });
+          dpkCursor.style.cssText =
+            "mix-blend-mode: normal; border-color: gray";
         }
 
         if (datafillbg) {
           const blendMode = datafillbg === "mixBlend" ? "difference" : "normal";
           const fillColor = datafillbg === "mixBlend" ? "white" : datafillbg;
-          gsap.set(dpkCursor, {
-            background: fillColor,
-            borderWidth: 0,
-            mixBlendMode: blendMode,
-          });
+          dpkCursor.style.cssText = `background-color: ${fillColor}; mix-blend-mode: ${blendMode}; border-width:0;`;
         }
       });
 
@@ -99,5 +87,3 @@ function cursorEffects() {
 }
 
 export { dpkCursor, initCursor, resetCursor, cursorEffects };
-
-
