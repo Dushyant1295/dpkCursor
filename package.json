@@ -1,6 +1,6 @@
 {
   "name": "dpk_cursor",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Easy, High Performance, Super smooth custom cursor functions built with gsap that help you to create cool things.",
   "main": "./module/dpkCursor.js",
   "scripts": {
