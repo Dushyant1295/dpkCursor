@@ -88,11 +88,11 @@ import { dpkCursor,initCursor,resetCursor,cursorEffects } from "dpk_cursor/modul
 
 #
 
-| Name              | Parameter            | Defaults         | Desc            |
-| ----------------- | -------------------- | ---------------- | --------------- |
-| `initCursor()`    | (speed, "Gsap Ease") | 0.13, 'sine.out' | initialization  |
-| `cursorEffects()` | -                    | -                | Use the Effects |
-| `resetCursor()`   | -                    | -                | reset dpkCursor |
+| Name              | Parameter | Defaults | Desc            |
+| ----------------- | --------- | -------- | --------------- |
+| `initCursor()`    | (speed)   | 0.13     | initialization  |
+| `cursorEffects()` | -         | -        | Use the Effects |
+| `resetCursor()`   | -         | -        | reset dpkCursor |
 
 #
 
