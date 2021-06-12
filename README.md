@@ -1,6 +1,6 @@
 # dpkCursor.js
 
-#### Easy, small, High Performance, Super smooth custom cursor functions built with gsap that helps you to create cool things using this small, just 2kb 100 lines of code JS library.
+#### Easy, small, High Performance, Super smooth custom cursor functions that helps you to create awwward-winning websites.
 
 #
 
@@ -12,6 +12,8 @@
 
 ##### [Play with it on Codepen]
 
+
+
 #
 
 ### How to use:
@@ -20,20 +22,25 @@
 
 Add the dpkCursor.css
 
-[download dpkCursor.min.css from CDN]
+[CDN link dpkcursor.css]
 
 ##### JAVASCRIPT
 
-Add the dpkCursor.min.js
+Add the dpkCursor.js
 
-[download dpkCursor.min.js from CDN]
+[CDN link dpkcursor.js]
+
+#
+
+
+
 
 ##### USAGE
 
 ```HTML
 
 
-<link rel="stylesheet" href="dpkCursor.min.css" />
+<link rel="stylesheet" href="dpkCursor.css" />
 
 
         <div class="dpk-hover" data-hover-text="Hello"> Text </div>
@@ -46,7 +53,7 @@ Add the dpkCursor.min.js
 
 
 
-<script src="dpkCursor.min.js"></script>
+<script src="dpkCursor.js"></script>
 
 <script>
     initCursor();
@@ -94,11 +101,7 @@ import { dpkCursor,initCursor,resetCursor,cursorEffects } from "dpk_cursor/modul
 
 #
 
-| Dependencies | Description                                                                                                                             |
-| ------------ | --------------------------------------------------------------------------------------------------------------------------------------- |
-| [💚 gsap]    | Greensock Animation Plateform (gsap) is a JavaScript library for building high-performance animations that work in every major browser. |
 
-[💚 gsap]: https://greensock.com/
-[download dpkcursor.min.js from cdn]: https://cdn.jsdelivr.net/gh/Dushyant1295/dpkCursor/dpkCursor.min.js
-[download dpkcursor.min.css from cdn]: https://cdn.jsdelivr.net/gh/Dushyant1295/dpkCursor/dpkCursor.min.css
+[CDN link dpkcursor.js]: https://cdn.jsdelivr.net/gh/Dushyant1295/dpkCursor/dpkCursor.js
+[CDN link dpkcursor.css]: https://cdn.jsdelivr.net/gh/Dushyant1295/dpkCursor/dpkCursor.css
 [play with it on codepen]: https://codepen.io/dushyant1295/pen/JjWrwZa
