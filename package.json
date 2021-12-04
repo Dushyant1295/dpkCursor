@@ -1,15 +1,15 @@
 {
   "name": "dpk_cursor",
   "version": "1.0.4",
-  "description": "Easy, High Performance, Super smooth custom cursor functions built with gsap that help you to create cool things.",
+  "description": "Easy, High Performance, Super smooth custom cursor functions that help you to create cool things.",
   "main": "./src/dpkCursor.js",
   "keywords": [
     "dpkCursor",
     "Custom Cursor",
     "Mouse Events",
-    "gsap"
+    "gsap Custom Cursor"
   ],
-  "author": "Dushyant",
+  "author": "dushyant.dev",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/Dushyant1295/dpkCursor/issues"
@@ -26,7 +26,6 @@
   },
   "dependencies": {
     "autoprefixer": "^10.4.0",
-    "dpk_cursor": "^1.0.4",
     "gsap": "^3.8.0"
   }
 }

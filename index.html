@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Dpk</title>
+  <title>DpkCursor</title>
   <style>
     body {
       min-height: 100vh;
@@ -12,7 +12,6 @@
       overflow: hidden;
       color: white;
       font-family: sans-serif;
-
     }
 
     .box-table {
@@ -52,27 +51,25 @@
 
 <body>
   <ul class="box-table">
-    <li class="dpk-hover" data-hover-text="hi"> Hello </li>
-    <li class="dpk-hover" data-hover-bg="blue"> Blue </li>
-    <li class="dpk-hover" data-hover-img="./glow.png"> Glow </li>
-    <li class="dpk-hover" data-hover-class="emogy" data-hover-text="💚"> emogy </li>
+    <li class="dpk-hover" data-hover-text="hi">Hello</li>
+    <li class="dpk-hover" data-hover-bg="blue">Blue</li>
+    <li class="dpk-hover" data-hover-img="./glow.png">Glow</li>
+    <li class="dpk-hover" data-hover-class="emogy" data-hover-text="💚">
+      emogy
+    </li>
 
-
-    <li class="dpk-hover" data-hover-class="mixBlend"> Mix Blend </li>
-    <li class="dpk-hover" data-hover-bg="#fefefe1d" data-hover-text="call"> Contact </li>
-    <li class="dpk-hover" data-hover-img="./glow.png"> Hello </li>
-    <li class="dpk-hover" data-hover-class="noCursor"> Home </li>
-
+    <li class="dpk-hover" data-hover-class="mixBlend">Mix Blend</li>
+    <li class="dpk-hover" data-hover-bg="#fefefe1d" data-hover-text="call">
+      Contact
+    </li>
+    <li class="dpk-hover" data-hover-img="./glow.png">Hello</li>
+    <li class="dpk-hover" data-hover-class="noCursor">Home</li>
   </ul>
-
-
-
 
   <script type="module">
     import "./src/dpkCursor.scss";
-    // import dpkCursor from "./src/dpkCursor";
+    import dpkCursor from "./src/dpkCursor";
 
-    import { dpkCursor } from "dpk_cursor/src/dpkCursor";
     const customCursor = new dpkCursor({
       ease: 0.25,
       useGsap: true,
