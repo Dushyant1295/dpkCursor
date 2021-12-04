@@ -86,8 +86,8 @@ const customCursor = new dpkCursor({ ease: 0.25 });
 
 #
 
-[cdn link dpkcursor.js]: https://cdn.jsdelivr.net/gh/Dushyant1295/dpkCursor/dpkCursor.min.js
-[cdn link dpkcursor.css]: https://cdn.jsdelivr.net/gh/Dushyant1295/dpkCursor/dpkCursor.min.css
+[cdn link dpkcursor.min.js]: https://cdn.jsdelivr.net/gh/Dushyant1295/dpkCursor/dpkCursor.min.js
+[cdn link dpkcursor.min.css]: https://cdn.jsdelivr.net/gh/Dushyant1295/dpkCursor/dpkCursor.min.css
 [play with it on codepen]: https://codepen.io/dushyant1295/pen/JjWrwZa
-[add the dpkcursor.css]: https://github.com/Dushyant1295/dpkCursor/blob/master/dpkCursor.min.css
-[add the dpkcursor.js]: https://github.com/Dushyant1295/dpkCursor/blob/master/dpkCursor.min.js
+[add the dpkcursor.min.css]: https://github.com/Dushyant1295/dpkCursor/blob/master/dpkCursor.min.css
+[add the dpkcursor.min.js]: https://github.com/Dushyant1295/dpkCursor/blob/master/dpkCursor.min.js
