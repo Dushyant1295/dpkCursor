@@ -1,2 +1,58 @@
-.dpkCursor{position:fixed;top:0;left:0;z-index:999;height:1.75rem;width:1.75rem;color:white;border:2px solid rgba(255,255,255,0.123);mix-blend-mode:difference;border-radius:5rem;pointer-events:none;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;-webkit-transition:width 0.25s cubic-bezier(0.51, 1.07, 1, 1),height 0.25s cubic-bezier(0.51, 1.07, 1, 1),background-color 0.1s cubic-bezier(0.51, 1.07, 1, 1);transition:width 0.25s cubic-bezier(0.51, 1.07, 1, 1),height 0.25s cubic-bezier(0.51, 1.07, 1, 1),background-color 0.1s cubic-bezier(0.51, 1.07, 1, 1)}.dpkCursor.hover-active{height:4rem;width:4rem;font-size:0.875rem}.dpkCursor.hover-bg{border-width:0;mix-blend-mode:normal}.dpkCursor.noCursor{border-width:0}.dpkCursor.emogy{height:6rem;width:6rem;font-size:2rem;mix-blend-mode:normal;border-color:gray}.dpkCursor.mixBlend{height:4rem;width:4rem;background:white;mix-blend-mode:difference}.dpkCursor.hover-img{height:10rem;width:10rem;border:none;border-radius:0;background-size:cover;mix-blend-mode:normal}.dpkCursor.star{height:10rem;width:10rem;font-size:5rem}
-/*# sourceMappingURL=dpkCursor.css.map */
+.dpkCursor {
+    align-items: center;
+    border: 2px solid #fff;
+    border-radius: 5rem;
+    color: #fff;
+    display: flex;
+    height: 1.75rem;
+    justify-content: center;
+    left: 0;
+    mix-blend-mode: difference;
+    pointer-events: none;
+    position: fixed;
+    top: 0;
+    transition: width 0.25s cubic-bezier(0.51, 1.07, 1, 1),
+      height 0.25s cubic-bezier(0.51, 1.07, 1, 1),
+      background-color 0.1s cubic-bezier(0.51, 1.07, 1, 1);
+    width: 1.75rem;
+    z-index: 999;
+  }
+  .dpkCursor.hover-active {
+    font-size: 0.875rem;
+    height: 4rem;
+    width: 4rem;
+  }
+  .dpkCursor.hover-bg {
+    border-width: 0;
+    mix-blend-mode: normal;
+  }
+  .dpkCursor.noCursor {
+    border-width: 0;
+  }
+  .dpkCursor.emogy {
+    border-color: #d3d3d3;
+    font-size: 2rem;
+    height: 4rem;
+    mix-blend-mode: normal;
+    width: 4rem;
+  }
+  .dpkCursor.mixBlend {
+    background: #fff;
+    height: 4rem;
+    mix-blend-mode: difference;
+    width: 4rem;
+  }
+  .dpkCursor.hover-img {
+    background-size: cover;
+    border: none;
+    border-radius: 0;
+    height: 10rem;
+    mix-blend-mode: normal;
+    width: 10rem;
+  }
+  .dpkCursor.star {
+    font-size: 5rem;
+    height: 10rem;
+    width: 10rem;
+  }
+  

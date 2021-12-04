@@ -6,7 +6,7 @@
   height: 1.75rem;
   width: 1.75rem;
   color: white;
-  border: 2px solid rgba(255, 255, 255, 0.123);
+  border: 2px solid #fff;
   mix-blend-mode: difference;
   border-radius: 5rem;
   pointer-events: none;
@@ -36,11 +36,11 @@
   }
 
   &.emogy {
-    height: 6rem;
-    width: 6rem;
+    height: 4rem;
+    width: 4rem;
     font-size: 2rem;
     mix-blend-mode: normal;
-    border-color: gray;
+    border-color: lightgray;
   }
 
   &.mixBlend {
