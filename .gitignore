@@ -5,3 +5,4 @@ webpack.config.js
 dpk.min.js.LICENSE.txt
 package.json
 desktop.ini
+dist

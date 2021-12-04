@@ -1,6 +1,6 @@
 # dpkCursor.js
 
-#### Easy, small, High Performance, Super smooth custom cursor functions that helps you to create awwward-winning websites.
+#### Easy, small, High Performance, Super smooth custom cursor functions that helps you to create cool websites.
 
 #
 
@@ -98,8 +98,8 @@ import { dpkCursor } from "dpk_cursor/src/dpkCursor";
 
 #
 
-[cdn link dpkcursor.js]: https://cdn.jsdelivr.net/gh/Dushyant1295/dpkCursor/dpkCursor.js
-[cdn link dpkcursor.css]: https://cdn.jsdelivr.net/gh/Dushyant1295/dpkCursor/dpkCursor.css
+[cdn link dpkcursor.js]: https://cdn.jsdelivr.net/gh/Dushyant1295/dpkCursor/dpkCursor.min.js
+[cdn link dpkcursor.css]: https://cdn.jsdelivr.net/gh/Dushyant1295/dpkCursor/dpkCursor.min.css
 [play with it on codepen]: https://codepen.io/dushyant1295/pen/JjWrwZa
-[add the dpkcursor.css]: https://github.com/Dushyant1295/dpkCursor/blob/master/dpkCursor.css
-[add the dpkcursor.js]: https://github.com/Dushyant1295/dpkCursor/blob/master/dpkCursor.js
+[add the dpkcursor.css]: https://github.com/Dushyant1295/dpkCursor/blob/master/dpkCursor.min.css
+[add the dpkcursor.js]: https://github.com/Dushyant1295/dpkCursor/blob/master/dpkCursor.min.js

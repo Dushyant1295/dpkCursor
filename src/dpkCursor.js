@@ -1,6 +1,3 @@
-import gsap from "gsap";
-
-
 export default class dpkCursor {
 
     /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -10,7 +7,6 @@ export default class dpkCursor {
     constructor(option = {}) {
         this.option = {
             ease: option.ease || 0.25,
-            useGsap: option.useGsap || false,
         };
         this.animationFrame = null;
         this.mousePos = { x: 0, y: 0 };
@@ -66,35 +62,8 @@ export default class dpkCursor {
 
 
     /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-                      Set Positon with Gsap 💚 💨
-    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
-
-    setPositionWithGsap() {
-        if (typeof gsap !== 'undefined') {
-            gsap.set(this.cursor, { xPercent: -50, yPercent: -50 });
-            this.xSet = gsap.quickSetter(this.cursor, "x", "px");
-            this.ySet = gsap.quickSetter(this.cursor, "y", "px");
-
-            gsap.ticker.add(() => {
-                const dt = 1.0 - Math.pow(1.0 - this.option.ease, gsap.ticker.deltaRatio());
-                this.cursorPos.x += (this.mousePos.x - this.cursorPos.x) * dt;
-                this.cursorPos.y += (this.mousePos.y - this.cursorPos.y) * dt;
-                this.xSet(this.cursorPos.x);
-                this.ySet(this.cursorPos.y);
-            });
-        } else {
-            console.warn("gsap is not defined")
-            this.setPosition();
-        }
-    }
-
-
-
-
-
-    /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-                          Reset the Cursor 🏓
-    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+                           Reset the Cursor 🏓
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 
     reset() {
         this.cursor.innerHTML = "";
@@ -109,7 +78,7 @@ export default class dpkCursor {
                      Hover Cursor Effects  ✨
     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 
-    setHover (el) {
+    setHover(el) {
         let hoverText = el.getAttribute("data-hover-text");
         let hoverImg = el.getAttribute("data-hover-img");
         let hoverClass = el.getAttribute("data-hover-class");
@@ -125,10 +94,10 @@ export default class dpkCursor {
             this.cursor.classList.add("hover-bg");
         }
 
-        if (hoverImg){
-         this.cursor.style.backgroundImage = `url(${hoverImg})`;
-         this.cursor.classList.add("hover-img");
-        }    
+        if (hoverImg) {
+            this.cursor.style.backgroundImage = `url(${hoverImg})`;
+            this.cursor.classList.add("hover-img");
+        }
     }
 
 
@@ -157,7 +126,7 @@ export default class dpkCursor {
     init() {
         this.createCursor();
         this.getPosition();
-        this.option.useGsap ? this.setPositionWithGsap() : this.setPosition();
+        this.setPosition();
         this.effect();
     }
 
