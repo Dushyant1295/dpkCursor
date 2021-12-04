@@ -1,6 +1,6 @@
 # dpkCursor.js
 
-#### Easy, small, High Performance, Super smooth custom cursor functions that helps you to create cool websites.
+#### High performance smooth custom cursor library that helps you to create cool things.
 
 #
 
@@ -10,7 +10,7 @@
     </a>
 </p>
 
-##### [Play with it on Codepen]
+##### [Play with Codepen]
 
 #
 
@@ -18,15 +18,11 @@
 
 ##### CSS
 
-[Add the dpkCursor.css]
-
-[CDN link dpkCursor.css]
+[Add dpkCursor.min.css]  or  [CDN dpkCursor.min.css]
 
 ##### JAVASCRIPT
 
-[Add the dpkCursor.js]
-
-[CDN link dpkcursor.js]
+[Add dpkCursor.min.js]   or  [CDN dpkcursor.min.js]
 
 #
 
@@ -35,27 +31,17 @@
 ```HTML
 
 
-<link rel="stylesheet" href="dpkCursor.css" />
+<link rel="stylesheet" href="dpkCursor.min.css" />
 
+<div class="dpk-hover" data-hover-text="Hello"> Text </div>
+<div class="dpk-hover" data-hover-class="class-name"> Add class to cursor </div>
+<div class="dpk-hover" data-hover-bg="#222"> Background Color </div>
+<div class="dpk-hover" data-hover-img="img/a.png"> Add Image As Background </div>
 
-        <div class="dpk-hover" data-hover-text="Hello"> Text </div>
-
-        <div class="dpk-hover" data-hover-class="class-name"> Add class to cursor </div>
-
-        <div class="dpk-hover" data-hover-bg="#222"> Background Color </div>
-
-        <div class="dpk-hover" data-hover-img="img/a.png"> Add Image As Background </div>
-
-
-
-<script src="dpkCursor.js"></script>
+<script src="dpkCursor.min.js"></script>
 
 <script>
-    
-    const customCursor = new dpkCursor({
-      ease: 0.25,
-    });
-
+    const customCursor = new dpkCursor({ ease: 0.25 });
 </script>
 
 
@@ -67,6 +53,8 @@
 npm install dpk_cursor
 
 import { dpkCursor } from "dpk_cursor/src/dpkCursor";
+
+const customCursor = new dpkCursor({ ease: 0.25 });
 
 ```
 

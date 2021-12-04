@@ -1,9 +1,5 @@
 export default class dpkCursor {
 
-    /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-                             Constructor 🥼
-    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
-
     constructor(option = {}) {
         this.option = {
             ease: option.ease || 0.25,
@@ -16,10 +12,7 @@ export default class dpkCursor {
 
 
 
-
-    /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-                           Create div Element 🔳
-    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+    // Create div Element 🔳
 
     createCursor() {
         this.cursor = document.createElement("div");
@@ -29,11 +22,7 @@ export default class dpkCursor {
 
 
 
-
-
-    /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-                    Mouse move Listener on window 🔳
-    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+    // Mouse move Listener on window 🔳
 
     getPosition() {
         window.addEventListener("mousemove", (e) => {
@@ -44,11 +33,7 @@ export default class dpkCursor {
 
 
 
-
-
-    /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-                       Follow The Cursor 💨
-    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+    //Follow The Cursor 💨
 
     setPosition() {
         this.cursorPos.x += (this.mousePos.x - this.cursorPos.x) * this.option.ease;
@@ -59,11 +44,7 @@ export default class dpkCursor {
 
 
 
-
-
-    /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-                           Reset the Cursor 🏓
-     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+    // Reset the Cursor 🏓
 
     reset() {
         this.cursor.innerHTML = "";
@@ -73,10 +54,7 @@ export default class dpkCursor {
 
 
 
-
-    /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-                     Hover Cursor Effects  ✨
-    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+    // Hover Cursor Effects  ✨
 
     setHover(el) {
         let hoverText = el.getAttribute("data-hover-text");
@@ -102,14 +80,10 @@ export default class dpkCursor {
 
 
 
-
-    /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-                       Listners 🤙
-    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+    // Listners 🤙
 
     effect() {
         const dataHover = document.querySelectorAll(".dpk-hover");
-
         dataHover.forEach((target) => {
             target.addEventListener("mouseenter", () => this.setHover(target));
             target.addEventListener("mouseleave", () => this.reset());
@@ -119,9 +93,7 @@ export default class dpkCursor {
 
 
 
-    /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-                            Init the Cursor 💡
-    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+    // Init the Cursor 💡
 
     init() {
         this.createCursor();
@@ -133,9 +105,8 @@ export default class dpkCursor {
 
 
 
-    /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-                         Destroy the Cursor  🚮
-    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+    // Destroy the Cursor  🚮
+
 
     destroy() {
         cancelAnimationFrame(this.animationFrame);
