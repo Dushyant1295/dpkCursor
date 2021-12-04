@@ -1,1 +1,172 @@
-const isMob=()=>!!(navigator.userAgent.match(/Android/i)||navigator.userAgent.match(/webOS/i)||navigator.userAgent.match(/iPhone/i)||navigator.userAgent.match(/iPad/i)||navigator.userAgent.match(/iPod/i)||navigator.userAgent.match(/BlackBerry/i)||navigator.userAgent.match(/Windows Phone/i)),dpkCursor=document.createElement("div");function initCursor(e=.25){if(isMob())dpkCursor.style.display="none";else{let r={x:-100,y:-100},t={x:-100,y:-100},o=e;window.addEventListener("mousemove",e=>{r.x=e.x,r.y=e.y});const n=()=>{t.x+=(r.x-t.x)*o,t.y+=(r.y-t.y)*o,dpkCursor.style.transform=`translate3d(calc(${t.x}px - 50%) ,calc(${t.y}px - 50%), 0)`};requestAnimationFrame(function e(){n(),requestAnimationFrame(e)})}}function resetCursor(){dpkCursor.innerHTML="",dpkCursor.classList.remove("hover-active"),dpkCursor.style.cssText="background: none; border-color: #fff;  border-width: 2px;  mix-blend-mode: difference;"}function cursorEffects(){const e=document.querySelectorAll(".dpk-hover");document.querySelectorAll(".noCursor");!isMob()&&e&&e.forEach(function(e){e.addEventListener("mouseenter",function(){let r=e.getAttribute("data-hover-text"),t=e.getAttribute("data-hover-emogy"),o=e.getAttribute("data-hover-bg");if(e.classList.contains("noCursor")?dpkCursor.style.borderWidth=0:dpkCursor.classList.add("hover-active"),r&&(dpkCursor.innerHTML=r),t&&(dpkCursor.innerHTML=`<b>${t}</b>`,dpkCursor.style.cssText="mix-blend-mode: normal; border-color: gray"),o){const e="mixBlend"===o?"difference":"normal",r="mixBlend"===o?"white":o;dpkCursor.style.cssText=`background-color: ${r}; mix-blend-mode: ${e}; border-width:0;`}}),e.addEventListener("mouseleave",resetCursor),e.addEventListener("click",resetCursor)})}dpkCursor.classList.add("dpkCursor"),document.body.appendChild(dpkCursor);
+class dpkCursor {
+
+    /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+                             Constructor 🥼
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+
+    constructor(option = {}) {
+        this.option = {
+            ease: option.ease || 0.25,
+            useGsap: option.useGsap || false,
+        };
+        this.animationFrame = null;
+        this.mousePos = { x: 0, y: 0 };
+        this.cursorPos = { x: 0, y: 0 };
+        this.init();
+    }
+
+
+
+
+    /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+                           Create div Element 🔳
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+
+    createCursor() {
+        this.cursor = document.createElement("div");
+        this.cursor.classList.add("dpkCursor");
+        document.body.appendChild(this.cursor);
+    }
+
+
+
+
+
+    /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+                    Mouse move Listener on window 🔳
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+
+    getPosition() {
+        window.addEventListener("mousemove", (e) => {
+            this.mousePos.x = e.x;
+            this.mousePos.y = e.y;
+        });
+    }
+
+
+
+
+
+    /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+                       Follow The Cursor 💨
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+
+    setPosition() {
+        this.cursorPos.x += (this.mousePos.x - this.cursorPos.x) * this.option.ease;
+        this.cursorPos.y += (this.mousePos.y - this.cursorPos.y) * this.option.ease;
+        this.cursor.style.transform = `translate3d(calc(${this.cursorPos.x}px - 50%) ,calc(${this.cursorPos.y}px - 50%), 0)`;
+        this.animationFrame = requestAnimationFrame(this.setPosition.bind(this));
+    }
+
+
+
+
+
+    /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+                      Set Positon with Gsap 💚 💨
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+
+    setPositionWithGsap() {
+        if (typeof gsap !== 'undefined') {
+            gsap.set(this.cursor, { xPercent: -50, yPercent: -50 });
+            this.xSet = gsap.quickSetter(this.cursor, "x", "px");
+            this.ySet = gsap.quickSetter(this.cursor, "y", "px");
+
+            gsap.ticker.add(() => {
+                const dt = 1.0 - Math.pow(1.0 - this.option.ease, gsap.ticker.deltaRatio());
+                this.cursorPos.x += (this.mousePos.x - this.cursorPos.x) * dt;
+                this.cursorPos.y += (this.mousePos.y - this.cursorPos.y) * dt;
+                this.xSet(this.cursorPos.x);
+                this.ySet(this.cursorPos.y);
+            });
+        } else {
+            console.warn("gsap is not defined")
+            this.setPosition();
+        }
+    }
+
+
+
+
+
+    /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+                          Reset the Cursor 🏓
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+
+    reset() {
+        this.cursor.innerHTML = "";
+        this.cursor.style.background = "";
+        this.cursor.className = "dpkCursor";
+    }
+
+
+
+
+    /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+                     Hover Cursor Effects  ✨
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+
+    setHover (el) {
+        let hoverText = el.getAttribute("data-hover-text");
+        let hoverImg = el.getAttribute("data-hover-img");
+        let hoverClass = el.getAttribute("data-hover-class");
+        let hoverBg = el.getAttribute("data-hover-bg");
+
+        if (hoverText) this.cursor.innerHTML = hoverText;
+
+        if (hoverClass) this.cursor.classList.add(hoverClass);
+        else this.cursor.classList.add("hover-active");
+
+        if (hoverBg) {
+            this.cursor.style.backgroundColor = hoverBg;
+            this.cursor.classList.add("hover-bg");
+        }
+
+        if (hoverImg){
+         this.cursor.style.backgroundImage = `url(${hoverImg})`;
+         this.cursor.classList.add("hover-img");
+        }    
+    }
+
+
+
+
+    /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+                       Listners 🤙
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+
+    effect() {
+        const dataHover = document.querySelectorAll(".dpk-hover");
+
+        dataHover.forEach((target) => {
+            target.addEventListener("mouseenter", () => this.setHover(target));
+            target.addEventListener("mouseleave", () => this.reset());
+            target.addEventListener("click", () => this.reset());
+        });
+    }
+
+
+
+    /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+                            Init the Cursor 💡
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+
+    init() {
+        this.createCursor();
+        this.getPosition();
+        this.option.useGsap ? this.setPositionWithGsap() : this.setPosition();
+        this.effect();
+    }
+
+
+
+
+    /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+                         Destroy the Cursor  🚮
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+
+    destroy() {
+        cancelAnimationFrame(this.animationFrame);
+        document.body.removeChild(this.cursor);
+    }
+}

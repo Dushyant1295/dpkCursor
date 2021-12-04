@@ -1,12 +1,9 @@
 {
   "name": "dpk_cursor",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Easy, High Performance, Super smooth custom cursor functions built with gsap that help you to create cool things.",
-  "main": "./module/dpkCursor.js",
-  "scripts": {
-    "dev": "webpack --mode development",
-    "build": "webpack --mode production"
-  },
+  "main": "./src/dpkCursor.js",
+ 
   "keywords": [
     "dpkCursor",
     "Custom Cursor",
@@ -19,9 +16,17 @@
     "url": "https://github.com/Dushyant1295/dpkCursor/issues"
   },
   "homepage": "https://github.com/Dushyant1295/dpkCursor#readme",
-  "dependencies": {},
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "serve": "vite preview"
+  },
   "devDependencies": {
-    "webpack": "^5.4.0",
-    "webpack-cli": "^4.2.0"
+    "sass": "^1.42.1",
+    "vite": "^2.5.4"
+  },
+  "dependencies": {
+    "autoprefixer": "^10.4.0",
+    "gsap": "^3.8.0"
   }
 }

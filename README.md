@@ -6,7 +6,7 @@
 
 <p align="left">        
     <a href="#">
-        <img src="./src/img/dpkCursor.gif" height="350">
+        <img src="dpkCursor.gif" height="350">
     </a>
 </p>
 
@@ -20,7 +20,7 @@
 
 [Add the dpkCursor.css]
 
-[CDN link dpkcursor.css]
+[CDN link dpkCursor.css]
 
 ##### JAVASCRIPT
 
@@ -40,19 +40,22 @@
 
         <div class="dpk-hover" data-hover-text="Hello"> Text </div>
 
-        <div class="dpk-hover" data-hover-emogy="💚"> Emogy </div>
+        <div class="dpk-hover" data-hover-class="class-name"> Add class to cursor </div>
 
-        <div class="dpk-hover" data-hover-bg="#222"> Background </div>
+        <div class="dpk-hover" data-hover-bg="#222"> Background Color </div>
 
-        <div class="dpk-hover noCursor" data-hover-bg="#222"> Text with Background </div>
+        <div class="dpk-hover" data-hover-img="img/a.png"> Add Image As Background </div>
 
 
 
 <script src="dpkCursor.js"></script>
 
 <script>
-    initCursor();
-    cursorEffects();
+    
+    const customCursor = new dpkCursor({
+      ease: 0.25,
+    });
+
 </script>
 
 
@@ -63,9 +66,7 @@
 ```sh
 npm install dpk_cursor
 
-// import like this
-
-import { dpkCursor,initCursor,resetCursor,cursorEffects } from "dpk_cursor/module/dpkCursor";
+import { dpkCursor } from "dpk_cursor/src/dpkCursor";
 
 ```
 
@@ -77,10 +78,10 @@ import { dpkCursor,initCursor,resetCursor,cursorEffects } from "dpk_cursor/modul
 
 | Attribute          | Values           | Description         |
 | ------------------ | ---------------- | ------------------- |
-| `data-hover-text`  | string           | text inside Circle  |
-| `data-hover-emogy` | string           | emogy inside Circle |
+| `data-hover-text`  | string           | text inside Cursor  |
+| `data-hover-class` | string           | add class to Cursor |
 | `data-hover-bg`    | color- name/code | bg Color of Circle  |
-| `data-hover-bg`    | mixBlend         | mix-blend effect    |
+| `data-hover-img`   | img/path         | img inside Cursor   |
 
 #
 
@@ -88,11 +89,12 @@ import { dpkCursor,initCursor,resetCursor,cursorEffects } from "dpk_cursor/modul
 
 #
 
-| Name              | Parameter | Defaults | Desc            |
-| ----------------- | --------- | -------- | --------------- |
-| `initCursor()`    | (speed)   | 0.13     | initialization  |
-| `cursorEffects()` | -         | -        | Use the Effects |
-| `resetCursor()`   | -         | -        | reset dpkCursor |
+| Name              | Parameter | Defaults | Desc             |
+| ----------------- | --------- | -------- | ---------------- |
+| `init()`          | -         |          | initialization   |
+| `effect()`        | -         | -        | Use the Effects  |
+| `reset()`         | -         | -        | reset dpkCursor  |
+| `destroy()`       | -         | -        | delete dpkCursor |
 
 #
 

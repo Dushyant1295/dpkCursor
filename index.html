@@ -2,51 +2,80 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>dpk.js</title>
-    <link rel="stylesheet" href="./src/css/dpk.css" />
-    <link rel="stylesheet" href="./dpkCursor.css" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dpk</title>
+  <style>
+    body {
+      min-height: 100vh;
+      background-color: black;
+      overflow: hidden;
+      color: white;
+      font-family: sans-serif;
+
+    }
+
+    .box-table {
+      display: block;
+      box-shadow: 0px 100px 70px -80px rgba(0, 0, 0, 0.55);
+      margin: 0;
+      padding: 5vw 10vw;
+    }
+
+    .box-table::after {
+      content: "";
+      clear: both;
+      display: table;
+    }
+
+    .box-table li {
+      display: flex;
+      position: relative;
+      align-items: center;
+      justify-content: center;
+      float: left;
+      width: 25%;
+      min-height: 20vw;
+      border: 1.5px solid #36363686;
+      box-sizing: border-box;
+      margin: 0px;
+      margin-left: -1px;
+      margin-bottom: -1px;
+
+      @media screen and (max-width: 576px) {
+        width: 50%;
+        min-height: 170px;
+      }
+    }
+  </style>
 </head>
 
 <body>
-    <section>
-        <br /><br /><br />
-        <h1 class="text-center mezius">Dpk Cursor</h1>
+  <ul class="box-table">
+    <li class="dpk-hover" data-hover-text="hi"> Hello </li>
+    <li class="dpk-hover" data-hover-bg="blue"> Blue </li>
+    <li class="dpk-hover" data-hover-img="./glow.png"> Glow </li>
+    <li class="dpk-hover" data-hover-class="emogy" data-hover-text="💚"> emogy </li>
 
-        <div class="container">
-            <ul class="box-table">
-                <li class="dpk-hover" data-hover-bg="mixBlend">
-                    <span class="line tb"></span> <span class="line rl"></span>
-                    Mix Blend
-                </li>
 
-                <li class="dpk-hover" data-hover-text="hi">
-                    <span class="line tb"></span><span class="line rl"></span>
-                    Hello
-                </li>
+    <li class="dpk-hover" data-hover-class="mixBlend"> Mix Blend </li>
+    <li class="dpk-hover" data-hover-bg="#fefefe1d" data-hover-text="call"> Contact </li>
+    <li class="dpk-hover" data-hover-img="./glow.png"> Hello </li>
+    <li class="dpk-hover" data-hover-class="noCursor"> Home </li>
 
-                <li class="dpk-hover" data-hover-emogy="💚">
-                    <span class="line tb"></span><span class="line rl"></span>
-                    Love
-                </li>
+  </ul>
 
-                <li class="dpk-hover" data-hover-text="Be" data-hover-bg="blue">
-                    <span class="line tb"></span><span class="line rl"></span>
-                    Blue
-                </li>
 
-                <li class="dpk-hover noCursor">
-                    <span class="line tb"></span><span class="line rl"></span>
-                    Blue
-                </li>
-            </ul>
 
-            <br /><br /><br />
-        </div>
-    </section>
 
-    <script src="src/dpkCursor.js"></script>
+  <script type="module">
+    import "./src/dpkCursor.scss";
+    import dpkCursor from "./src/dpkCursor";
+    const customCursor = new dpkCursor({
+      ease: 0.25,
+      useGsap: true,
+    });
+  </script>
 </body>
 
 </html>
