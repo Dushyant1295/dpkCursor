@@ -1,4 +1,4 @@
-export default class dpkCursor {
+class dpkCursor {
 
     constructor(option = {}) {
         this.option = {
@@ -113,3 +113,7 @@ export default class dpkCursor {
         document.body.removeChild(this.cursor);
     }
 }
+
+
+
+export { dpkCursor }

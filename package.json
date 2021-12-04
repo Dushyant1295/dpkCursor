@@ -1,6 +1,6 @@
 {
   "name": "dpk_cursor",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "description": "high performance smooth custom cursor library that helps you to create cool things.",
   "main": "src/dpkCursor.js",
   "keywords": [
